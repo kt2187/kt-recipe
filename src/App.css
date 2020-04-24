@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+
+.body {
+  background: #367;
+}
+
+.card h4 {
+  padding: 10px 0px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  transition: .5s;
+  background: #eee;
+}
+
+.card:hover, h5 {
+  color: #c2185b;
+} 
+
+.card:hover {
+  transform: scale(1.03);
+  background: #fff;
+}
