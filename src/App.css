@@ -44,13 +44,18 @@
 
 .card h4 {
   padding: 10px 0px;
+  background-color: cadetblue;
+  color: brown;
 }
 
 .card {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
+  flex-wrap: wrap; */
+  /* align-items: center; */
   transition: .5s;
-  background: #eee;
+  /* background: #eee; */
+  background: green;
 }
 
 .card:hover, h5 {
@@ -61,3 +66,41 @@
   transform: scale(1.03);
   background: #fff;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: darkorange;
+  padding: 0 3vw;
+  margin-bottom: 16px;
+}
+
+#app-title {
+  display: flex;
+  flex: 1;
+  background-color: cornflowerblue;
+}
+
+#app-navigation {
+  display: flex;
+  background-color: purple;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.container {
+  background-color: #c2185b;
+}
+
+/* .row {
+  background-color: aqua;
+} */
+
+.addRecipes {
+  /* background-color: red; */
+  margin-left: 35em;
+  margin-right: 35em;
+  border-style: solid;
+}
+
