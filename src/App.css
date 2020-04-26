@@ -24,10 +24,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,70 +33,54 @@
   }
 }
 
-
-.body {
-  background: #367;
+body {
+  color: #367;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .card h4 {
   padding: 10px 0px;
-  background-color: cadetblue;
-  color: brown;
 }
 
 .card {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
-  /* align-items: center; */
   transition: .5s;
-  /* background: #eee; */
-  background: green;
+  background: #eee;
 }
 
 .card:hover, h5 {
-  color: #c2185b;
+  color: #2853e2;
 } 
 
 .card:hover {
   transform: scale(1.03);
-  background: #fff;
+  background: #367;
 }
 
 .header {
   display: flex;
   flex-direction: row;
-  background-color: darkorange;
   padding: 0 3vw;
   margin-bottom: 16px;
+  background-color: #EEEEEE;
 }
 
 #app-title {
   display: flex;
   flex: 1;
-  background-color: cornflowerblue;
 }
 
 #app-navigation {
   display: flex;
-  background-color: purple;
   justify-content: center;
   align-items: center;
   padding: 0 32px;
 }
 
-.container {
-  background-color: #c2185b;
-}
-
-/* .row {
-  background-color: aqua;
-} */
-
 .addRecipes {
-  /* background-color: red; */
-  margin-left: 35em;
-  margin-right: 35em;
   border-style: solid;
 }
 
+a {
+  color: #367;
+}

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import RecipeForm from './components/RecipeForm';
-import Recipe from './components/Recipe';
-import recipes from './mock/recipes';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import RecipeList from './components/RecipeList';
+import RecipeForm from './components/RecipeForm';
+import NavBar from './components/NavBar';
+import recipes from './mock/recipes';
 
 class App extends Component {
   //Load default data 
@@ -16,24 +18,21 @@ class App extends Component {
     });
   };
 
-  renderRecipes = () => {
-    const displayRecipes = this.state.recipes.map(recipe => {
-      return <Recipe recipe={recipe} />
-    });
-    return displayRecipes;
-  }
   render() {
     return (
-      <div className="App">
-        <div className="header">
-          <h1 id="app-title">Kt's Recipes</h1>
-          <div id="app-navigation">
-            <a href="">Add Recipe</a>
-          </div>
+      <BrowserRouter>
+        <div className="App">
+          <NavBar />
+          <switch>
+            <Route path="/" exact>
+              <RecipeList recipeList={this.state.recipes} />
+            </Route>
+            <Route path="/addrecipe" exact>
+              <RecipeForm addRecipe={this.addRecipe} />
+            </Route>
+          </switch>
         </div>
-        {this.renderRecipes()}
-        <RecipeForm addRecipe={this.addRecipe} />
-      </div>
+      </BrowserRouter>
     );
   }
 }
