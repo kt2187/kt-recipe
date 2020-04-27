@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 const INITIAL_STATE = {
   id: 0,
-  recipeTitle: "",
-  posterName: "",
+  recipeName: "",
   link: "",
   video: "",
   ingredients: [],
@@ -38,7 +37,6 @@ class RecipeForm extends Component {
     this.props.addRecipe(recipeData);
     this.setState({
       recipeName: "",
-      posterName: "",
       link: "",
       video: "",
       ingredients: [],
@@ -63,24 +61,15 @@ class RecipeForm extends Component {
           />
           <input
             type="text"
-            id="posterName"
-            placeholder="Poster Name"
-            value={this.state.posterName}
-            onChange={(e) => this.handleChange(e)}
-            required
-          />
-          <input
-            type="text"
             id="link"
-            placeholder="Recipe Link"
+            placeholder="Recipe Link (Optional)"
             value={this.state.link}
             onChange={(e) => this.handleChange(e)}
-            required
           />
           <input
             type="text"
             id="video"
-            placeholder="Recipe Video"
+            placeholder="Recipe Video (Optional)"
             value={this.state.video}
             onChange={(e) => this.handleChange(e)}
           />
@@ -103,17 +92,17 @@ class RecipeForm extends Component {
           <input
             type="text"
             id="recipeNotes"
-            placeholder="Recipe Notes"
+            placeholder="Recipe Notes (Optional)"
             value={this.state.recipeNotes}
             onChange={(e) => this.handleChange(e)}
           />
-          <input
+          {/*<input
             type="text"
             id="comments"
             placeholder="Comments"
             value={this.state.comments}
             onChange={(e) => this.handleChange(e)}
-          />
+          />*/}
           <button className="btn waves-effect waves-light" type="submit" name="action">Submit
           </button>
         </form>
