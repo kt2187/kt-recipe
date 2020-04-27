@@ -1,36 +1,52 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import RecipeList from './components/RecipeList';
 import RecipeForm from './components/RecipeForm';
+import RecipeList from './components/RecipeList';
+import ViewRecipe from './components/ViewRecipe';
 import NavBar from './components/NavBar';
-import recipes from './mock/recipes';
+import INITIAL_RECIPES from './mock/recipes';
 
 class App extends Component {
-  //Load default data 
   state = {
-    recipes: [...recipes],
+    recipes: [...INITIAL_RECIPES],
+    selected: 1,
   };
 
   addRecipe = (recipeData) => {
+    recipeData.id = this.state.recipes.length + 1;
     this.setState({
+      ...this.state,
       recipes: [...this.state.recipes, recipeData],
     });
   };
+
+  handleSelect = (id) => {
+    console.log("clicked", id);
+    this.setState({
+      ...this.state,
+      selected: id
+    })
+  }
 
   render() {
     return (
       <BrowserRouter>
         <div className="App">
           <NavBar />
-          <switch>
+          <Switch>
             <Route path="/" exact>
-              <RecipeList recipeList={this.state.recipes} />
+              <RecipeList
+                recipeList={this.state.recipes}
+                handleSelect={this.handleSelect} />
             </Route>
             <Route path="/addrecipe" exact>
               <RecipeForm addRecipe={this.addRecipe} />
             </Route>
-          </switch>
+            <Route path="/recipe/:recipeId">
+              <ViewRecipe recipe={this.state.recipes[this.state.selected - 1]} />
+            </Route>
+          </Switch>
         </div>
       </BrowserRouter>
     );

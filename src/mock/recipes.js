@@ -1,5 +1,6 @@
 const recipes = [
   {
+    id: 1,
     recipeName: "Instant Pot Chicken Tacos (Pressure Cooker)",
     posterName: "Katie Barriere",
     link: "https://www.spendwithpennies.com/instant-pot-chicken-tacos/",
@@ -27,6 +28,7 @@ const recipes = [
     comments: ["Delicious", "A family favorite"]
   },
   {
+    id: 2,
     recipeName: "DIY Taco Seasoning Recipe",
     posterName: "Katie Barriere",
     link: "https://www.spendwithpennies.com/taco-seasoning-recipe/",
@@ -51,6 +53,7 @@ const recipes = [
     comments: ["My go to taco seasoning", "Cheap and easy to make"]
   },
   {
+    id: 3,
     recipeName: "Waffles I",
     posterName: "Katie Barriere",
     link: "https://www.allrecipes.com/recipe/22180/waffles-i/?internalSource=hub%20recipe&referringContentType=Search",
@@ -72,6 +75,7 @@ const recipes = [
     comments: ["We use plain applesauce instead of oil", "A family favorite"]
   },
   {
+    id: 4,
     recipeName: "Kid pleasing chili",
     posterName: "Katie Barriere",
     link: "",
@@ -88,6 +92,7 @@ const recipes = [
     comments: ["My kids loved this", "Cheap and easy to make"]
   },
   {
+    id: 5,
     recipeName: "Homemade Black Bean Veggie Burgers",
     posterName: "Katie Barriere",
     link: "https://www.allrecipes.com/recipe/85452/homemade-black-bean-veggie-burgers/?internalSource=hub%20recipe&referringContentType=Search",

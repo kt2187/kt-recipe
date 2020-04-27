@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
-const Recipe = ({ recipe }) => {
-  return (
-    <div className="container services">
-      <div className="row">
+class Recipe extends Component {
+  state = {
+    clicked: false
+  }
+
+  handleClick = () => {
+    this.props.handleSelect(this.props.recipe.id);
+    this.setState({ clicked: true })
+  };
+
+  render() {
+    const { recipe } = this.props;
+
+    return (
+      <div className="row" onClick={() => this.handleClick()}>
+        {this.state.clicked ? <Redirect to="/recipe/id" /> : null}
         <div className="col s12 m6 13 center-align">
           <div className="card">
             <div className="card-content">
@@ -16,10 +29,9 @@ const Recipe = ({ recipe }) => {
               <div className="card-action"><a href={recipe.video} target="_blank">Video</a></div>
             </div>
           </div>
-        </div >
-      </div >
-    </div >
-  )
+        </div>
+      </div>
+    )
+  }
 }
-
 export default Recipe;

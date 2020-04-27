@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 
+const INITIAL_STATE = {
+  id: 0,
+  recipeTitle: "",
+  posterName: "",
+  link: "",
+  video: "",
+  ingredients: [],
+  instructions: [],
+  recipeNotes: "",
+  comments: [],
+};
+
+
 class RecipeForm extends Component {
-  state = {
-    recipeTitle: "",
-    posterName: "",
-    link: "",
-    video: "",
-    ingredients: [],
-    instructions: [],
-    recipeNotes: "",
-    comments: [],
-  }
+  state = { ...INITIAL_STATE }
+
+  // componentDidMount = () => {
+  //   console.log("Mounting Form");
+  //   this.setState({ ...INITIAL_STATE });
+  // };
 
   handleChange = (e) => {
     this.setState({
@@ -97,7 +106,6 @@ class RecipeForm extends Component {
             placeholder="Recipe Notes"
             value={this.state.recipeNotes}
             onChange={(e) => this.handleChange(e)}
-            required
           />
           <input
             type="text"
@@ -106,7 +114,7 @@ class RecipeForm extends Component {
             value={this.state.comments}
             onChange={(e) => this.handleChange(e)}
           />
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <button className="btn waves-effect waves-light" type="submit" name="action">Submit
           </button>
         </form>
       </div>
