@@ -33,7 +33,6 @@ class RecipeForm extends Component {
     const recipeData = { ...this.state };
     recipeData.ingredients = recipeData.ingredients.split(", ");
     recipeData.instructions = recipeData.instructions.split(", ");
-    recipeData.comments = recipeData.comments.split(", ");
     this.props.addRecipe(recipeData);
     this.setState({
       recipeName: "",

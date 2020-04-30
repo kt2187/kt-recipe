@@ -24,7 +24,7 @@ const recipes = [
       "Combine with sauce in Instant Pot and serve as desired."
     ],
     recipeNotes: "Nutrition information does not include taco shells or toppings. If your chicken breasts are on the smaller size, you will want to reduce the timing by about 2-3 minutes.",
-    comments: [{ commenter: "Dave", text: "A family favorite" }],
+    // comments: [{ commenter: "Dave", text: "A family favorite" }],
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ const recipes = [
       "Store in an airtight container.",
       "Store for up to 6 months in a cool dry place."],
     recipeNotes: "For tacos add 2 Tablespoons (or to taste) to 1 pound of cooked ground meat (optional, add diced onions). Add 1/2 cup water and simmer until most of the water has evaporated.",
-    comments: [{ commenter: "Nate", text: "Cheap and easy to make" }],
+    // comments: [{ commenter: "Nate", text: "Cheap and easy to make" }],
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ const recipes = [
     instructions: ["Preheat waffle iron. Beat eggs in large bowl with hand beater until fluffy.", "Beat in flour, milk, vegetable oil, sugar, baking powder, salt and vanilla, just until smooth.",
       "Spray preheated waffle iron with non - stick cooking spray.Pour mix onto hot waffle iron.", "Cook until golden brown.Serve hot."],
     recipeNotes: "You can keep the batter covered in the fridge for up to a week. Just be sure to whisk well before using again. You may also use whole wheat flour for this recipe.",
-    comments: [{ commenter: "Steven", text: "We use plain applesauce instead of oil" }],
+    // comments: [{ commenter: "Steven", text: "We use plain applesauce instead of oil" }],
   },
   {
     id: 4,
@@ -85,7 +85,7 @@ const recipes = [
       "corn chips"],
     instructions: ["Cook ground turkey", "combine all ingredients in crockpot", "cook for 4 hours"],
     recipeNotes: "Add rice or quinoa or change ground turkey to hamburg if desired",
-    comments: [{ commenter: "Rita", text: "Cheap and easy to make" }],
+    // comments: [{ commenter: "Rita", text: "Cheap and easy to make" }],
   },
   {
     id: 5,
@@ -113,7 +113,7 @@ const recipes = [
       "In a small bowl, stir together egg, chili powder, cumin, and chili sauce.",
       "Stir the egg mixture into the mashed beans.", "Mix in bread crumbs until the mixture is sticky and holds together.", "Divide mixture into four patties.",
       "If grilling, place patties on foil, and grill about 8 minutes on each side.", "If baking, place patties on baking sheet, and bake about 10 minutes on each side."],
-    comments: [{ commenter: "My kids loved this", text: "Cheap and easy to make" }],
+    // comments: [{ commenter: "My kids loved this", text: "Cheap and easy to make" }],
   },
 ]
 
