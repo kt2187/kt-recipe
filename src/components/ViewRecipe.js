@@ -16,7 +16,7 @@ class ViewRecipe extends Component {
   renderComments = (recipe) => {
     return recipe.comments.map((comment) => {
       return (
-        <div className="card-content">
+        <div key={comment.commenter} className="card-content">
           <p>{comment.commenter}</p>
           <p>{comment.text}</p>
         </div>
@@ -36,13 +36,14 @@ class ViewRecipe extends Component {
             <p>Instructions: {recipe.instructions}</p>
             {recipe.recipeNotes ? (<p>Recipe Notes: {recipe.recipeNotes}</p>) : null}
 
-            {this.state.showComments ? this.renderComments(recipe) : null}
+
             {recipe.link ? (<div className="card-action"><a href={recipe.link} target="_blank">Recipe Source</a></div>) : null}
             {recipe.video ? (<div className="card-action"><a href={recipe.video} target="_blank">Video</a></div>) : null}
             <div>
               <Button onClick={this.clickHandler}>
                 {this.state.showComments ? "Hide Comments" : "Show Comments"}
               </Button>
+              {this.state.showComments ? this.renderComments(recipe) : null}
             </div>
           </div>
         </div>
