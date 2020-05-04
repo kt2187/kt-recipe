@@ -14,7 +14,8 @@ class App extends Component {
   };
 
   addRecipe = (recipeData) => {
-    recipeData.id = this.state.recipes.length + 1;
+    recipeData.id = this.state.recipes[this.state.recipes.length - 1].id + 1;
+    console.log("hello", recipeData);
     this.setState({
       ...this.state,
       recipes: [...this.state.recipes, recipeData],
@@ -25,9 +26,9 @@ class App extends Component {
     console.log("clicked", id);
     this.setState({
       ...this.state,
-      selected: id
-    })
-  }
+      selected: id,
+    });
+  };
 
   render() {
     return (
@@ -44,7 +45,8 @@ class App extends Component {
               <RecipeForm addRecipe={this.addRecipe} />
             </Route>
             <Route path="/recipe/:recipeId">
-              <ViewRecipe recipe={this.state.recipes[this.state.selected - 1]} />
+              {/* <ViewRecipe recipe={this.state.recipes[this.state.selected - 1]} />*/}
+              <ViewRecipe recipe={this.state.recipes} />
             </Route>
           </Switch>
         </div>

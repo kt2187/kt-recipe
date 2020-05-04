@@ -16,7 +16,7 @@ class Recipe extends Component {
 
     return (
       <div className="row" onClick={() => this.handleClick()}>
-        {this.state.clicked ? <Redirect to="/recipe/id" /> : null}
+        {this.state.clicked ? <Redirect to={`/recipe/${recipe.id}`} /> : null}
         <div className="col s12 m6 13 center-align">
           <div className="card">
             <div className="card-content">

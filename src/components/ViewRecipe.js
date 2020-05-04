@@ -1,24 +1,54 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import Button from './common/Button';
 
-const ViewRecipe = (props) => {
-  const { recipeId } = useParams();
-  const { recipe } = props;
-  return (
-    <div className="col s12 m6 13 center-align">
-      <div className="card">
+class ViewRecipe extends Component {
+  state = {
+    showComments: false,
+  };
+
+  clickHandler = () => {
+    this.setState({
+      showComments: !this.state.showComments,
+    });
+  };
+
+  renderComments = (recipe) => {
+    return recipe.comments.map((comment) => {
+      return (
         <div className="card-content">
-          <h4>{recipe.recipeName}</h4>
-          <p>Ingredients: {recipe.ingredients}</p>
-          <p>Instructions: {recipe.instructions}</p>
-          {recipe.recipeNotes ? (<p>Recipe Notes: {recipe.recipeNotes}</p>) : null}
-          {recipe.comments ? (<p>Comments: {recipe.comments.length}</p>) : null}
-          {recipe.link ? (<div className="card-action"><a href={recipe.link} target="_blank">Recipe Source</a></div>) : null}
-          {recipe.video ? (<div className="card-action"><a href={recipe.video} target="_blank">Video</a></div>) : null}
+          <p>{comment.commenter}</p>
+          <p>{comment.text}</p>
+        </div>
+      );
+    });
+  };
+
+  render() {
+    const { recipeId } = this.props.match.params;
+    const recipe = this.props.recipe[recipeId - 1];
+    return (
+      <div className="col s12 m6 13 center-align" >
+        <div className="card">
+          <div className="card-content">
+            <h4>{recipe.recipeName}</h4>
+            <p>Ingredients: {recipe.ingredients}</p>
+            <p>Instructions: {recipe.instructions}</p>
+            {recipe.recipeNotes ? (<p>Recipe Notes: {recipe.recipeNotes}</p>) : null}
+
+            {this.state.showComments ? this.renderComments(recipe) : null}
+            {recipe.link ? (<div className="card-action"><a href={recipe.link} target="_blank">Recipe Source</a></div>) : null}
+            {recipe.video ? (<div className="card-action"><a href={recipe.video} target="_blank">Video</a></div>) : null}
+            <div>
+              <Button onClick={this.clickHandler}>
+                {this.state.showComments ? "Hide Comments" : "Show Comments"}
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-export default ViewRecipe;
+export default withRouter(ViewRecipe);

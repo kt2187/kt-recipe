@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './common/Button';
 
 const INITIAL_STATE = {
   id: 0,
@@ -15,11 +16,6 @@ const INITIAL_STATE = {
 class RecipeForm extends Component {
   state = { ...INITIAL_STATE }
 
-  // componentDidMount = () => {
-  //   console.log("Mounting Form");
-  //   this.setState({ ...INITIAL_STATE });
-  // };
-
   handleChange = (e) => {
     this.setState({
       ...this.state,
@@ -34,15 +30,7 @@ class RecipeForm extends Component {
     recipeData.ingredients = recipeData.ingredients.split(", ");
     recipeData.instructions = recipeData.instructions.split(", ");
     this.props.addRecipe(recipeData);
-    this.setState({
-      recipeName: "",
-      link: "",
-      video: "",
-      ingredients: [],
-      instructions: [],
-      recipeNotes: "",
-      comments: [],
-    });
+    this.setState({ ...INITIAL_STATE });
   };
 
   render() {
@@ -102,8 +90,8 @@ class RecipeForm extends Component {
             value={this.state.comments}
             onChange={(e) => this.handleChange(e)}
           />*/}
-          <button className="btn waves-effect waves-light" type="submit" name="action">Submit
-          </button>
+          <Button type="submit">Submit
+        </Button>
         </form>
       </div>
     )
