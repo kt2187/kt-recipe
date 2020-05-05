@@ -25,6 +25,7 @@ export default [
     ],
     recipeNotes: "Nutrition information does not include taco shells or toppings. If your chicken breasts are on the smaller size, you will want to reduce the timing by about 2-3 minutes.",
     comments: [{ commenter: "Dave", text: "A family favorite" }],
+    rating: 5,
   },
   {
     id: 2,
@@ -49,12 +50,13 @@ export default [
       "Store for up to 6 months in a cool dry place."],
     recipeNotes: "For tacos add 2 Tablespoons (or to taste) to 1 pound of cooked ground meat (optional, add diced onions). Add 1/2 cup water and simmer until most of the water has evaporated.",
     comments: [{ commenter: "Nate", text: "Cheap and easy to make" }],
+    rating: 4,
   },
   {
     id: 3,
     recipeName: "Waffles I",
     link: "https://www.allrecipes.com/recipe/22180/waffles-i/?internalSource=hub%20recipe&referringContentType=Search",
-    video: "https://www.allrecipes.com/video/891/waffles-i/?internalSource=picture_play&referringId=22180&referringContentType=Recipe",
+    video: "//players.brightcove.net/1033249144001/HyUr5pA17_default/index.html?videoId=1662271207001",
     ingredients: ["2 eggs",
       "2 cups all-purpose flour",
       "1 3/4 cups milk",
@@ -70,6 +72,7 @@ export default [
       "Spray preheated waffle iron with non - stick cooking spray.Pour mix onto hot waffle iron.", "Cook until golden brown.Serve hot."],
     recipeNotes: "You can keep the batter covered in the fridge for up to a week. Just be sure to whisk well before using again. You may also use whole wheat flour for this recipe.",
     comments: [{ commenter: "Steven", text: "We use plain applesauce instead of oil" }],
+    rating: 4,
   },
   {
     id: 4,
@@ -86,12 +89,13 @@ export default [
     instructions: ["Cook ground turkey", "combine all ingredients in crockpot", "cook for 4 hours"],
     recipeNotes: "Add rice or quinoa or change ground turkey to hamburg if desired",
     comments: [{ commenter: "Rita", text: "Cheap and easy to make" }],
+    rating: 5,
   },
   {
     id: 5,
     recipeName: "Homemade Black Bean Veggie Burgers",
     link: "https://www.allrecipes.com/recipe/85452/homemade-black-bean-veggie-burgers/?internalSource=hub%20recipe&referringContentType=Search",
-    video: "https://www.allrecipes.com/video/1277/homemade-black-bean-veggie-burgers/?internalSource=picture_play&referringId=85452&referringContentType=Recipe",
+    video: "//players.brightcove.net/1033249144001/HyUr5pA17_default/index.html?videoId=2560105183001",
     ingredients: [
       "1 (16 ounce) can black beans",
       "drained and rinsed",
@@ -114,5 +118,6 @@ export default [
       "Stir the egg mixture into the mashed beans.", "Mix in bread crumbs until the mixture is sticky and holds together.", "Divide mixture into four patties.",
       "If grilling, place patties on foil, and grill about 8 minutes on each side.", "If baking, place patties on baking sheet, and bake about 10 minutes on each side."],
     comments: [{ commenter: "My kids loved this", text: "Cheap and easy to make" }],
+    rating: 3,
   },
 ]

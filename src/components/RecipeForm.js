@@ -10,6 +10,7 @@ const INITIAL_STATE = {
   instructions: [],
   recipeNotes: "",
   comments: [],
+  rating: "",
 };
 
 
@@ -82,6 +83,14 @@ class RecipeForm extends Component {
             placeholder="Recipe Notes (Optional)"
             value={this.state.recipeNotes}
             onChange={(e) => this.handleChange(e)}
+          />
+          <input
+            type="number"
+            id="rating"
+            placeholder="1 to 5 Rating"
+            value={this.state.rating}
+            onChange={(e) => this.handleChange(e)}
+            required
           />
           {/*<input
             type="text"

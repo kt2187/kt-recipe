@@ -25,8 +25,10 @@ class Recipe extends Component {
               <p>Instructions: {recipe.instructions}</p>
               {recipe.recipeNotes ? (<p>Recipe Notes: {recipe.recipeNotes}</p>) : null}
               {recipe.comments ? (<p>Comments: {recipe.comments.length}</p>) : null}
+              <p>Rating: {recipe.rating}</p>
               {recipe.link ? (<div className="card-action"><a href={recipe.link} target="_blank">Recipe Source</a></div>) : null}
-              {recipe.video ? (<div className="card-action"><a href={recipe.video} target="_blank">Video</a></div>) : null}
+              {/*{recipe.video ? (<div className="card-action"><a href={recipe.video} target="_blank">Video</a></div>) : null}*/}
+              {/*{recipe.video ? (<div><iframe width="width" height="width" src={recipe.video}></iframe></div>) : null}*/}
             </div>
           </div>
         </div>
