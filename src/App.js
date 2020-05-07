@@ -35,20 +35,22 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <NavBar />
-          <Switch>
-            <Route path="/" exact>
-              <RecipeList
-                recipeList={this.state.recipes}
-                handleSelect={this.handleSelect} />
-            </Route>
-            <Route path="/addrecipe" exact>
-              <RecipeForm addRecipe={this.addRecipe} />
-            </Route>
-            <Route path="/recipe/:recipeId">
-              {/* <ViewRecipe recipe={this.state.recipes[this.state.selected - 1]} />*/}
-              <ViewRecipe recipe={this.state.recipes} />
-            </Route>
-          </Switch>
+          <label>
+            <Switch>
+              <Route path="/" exact>
+                <RecipeList
+                  recipeList={this.state.recipes}
+                  handleSelect={this.handleSelect} />
+              </Route>
+              <Route path="/addrecipe" exact>
+                <RecipeForm addRecipe={this.addRecipe} />
+              </Route>
+              <Route path="/recipe/:recipeId">
+                {/* <ViewRecipe recipe={this.state.recipes[this.state.selected - 1]} />*/}
+                <ViewRecipe recipe={this.state.recipes} />
+              </Route>
+            </Switch>
+          </label>
         </div>
       </BrowserRouter>
     );

@@ -45,8 +45,9 @@ class ViewRecipe extends Component {
             <p>Ingredients: {recipe.ingredients}</p>
             <p>Instructions: {recipe.instructions}</p>
             {recipe.recipeNotes ? (<p>Recipe Notes: {recipe.recipeNotes}</p>) : null}
-            <p>Rating: {this.renderStars(recipe)}</p>
-
+            <p>
+              Rating: {this.renderStars(recipe)}
+            </p>
             {recipe.link ? (<div className="card-action"><a href={recipe.link} target="_blank">Recipe Source</a></div>) : null}
             {/*{recipe.video ? (<div className="card-action"><a href={recipe.video} target="_blank">Video</a></div>) : null}*/}
             {recipe.video ? (<div><iframe width="width" height="width" src={recipe.video}></iframe></div>) : null}

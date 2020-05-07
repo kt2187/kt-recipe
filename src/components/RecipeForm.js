@@ -92,13 +92,6 @@ class RecipeForm extends Component {
             onChange={(e) => this.handleChange(e)}
             required
           />
-          {/*<input
-            type="text"
-            id="comments"
-            placeholder="Comments"
-            value={this.state.comments}
-            onChange={(e) => this.handleChange(e)}
-          />*/}
           <Button type="submit">Submit
         </Button>
         </form>
